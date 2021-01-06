@@ -1,0 +1,142 @@
+Black BG Studio Preset
+By R'iscall Mortiss (Primal/Famfrit) - @RiscallXIV on twitter
+
+As the name states, this preset is used mostly in studios when
+you have a solid black background behind you. I like using it with
+White Screens (housing vendors sell them) dyed jet black (though
+soot black is fine too!). It's tuned for the gpose lights but you
+can probably use whatever housing lights you want with some adjustment.
+I use basic three point lighting up close, and sometimes adjust
+character lighting and global brightness in gpose as necessary.
+
+EXAMPLES - (link to the tweet when I post it)
+
+Most of this can be used out of the box with very little adjustment.
+I included a bunch of optional shaders you can turn on and off for
+some nice effects, but they're not necessary. For the most part it
+can be used at any resolution, though I have included clone copyright
+shaders for both 1440p and 4K, just turn one off and the other on
+(or leave them both off, you TOS-defying maniac :P).
+
+Like any other preset, feel free to mess with the sliders to your
+hearts' desires!
+
+I've included a list below on what each individual shader does because
+I had to learn what a lot of these did and how they worked myself and
+I'd love to be able to speed up that process for others. I want this
+to be a teaching tool just as much as I want this to be a cool preset.
+Let me know if you have any questions!
+
+WHAT EACH SHADER DOES:
+
+Before - used with After at the bottom. Together they show half
+the screen as it looks without GShade for comparison.
+
+FFKeepUI - used with FFRestoreUI so that the UI isn't affected by
+GShade.
+
+MXAO - Off by default. Ambient occlusion shader. Used to put better
+shadows on edges. Offered as an alternative to the on-by-default HBAO
+for shadows in case it's making your graphics card scream.
+
+HBAO - Another occlusion shader. Does some pretty costly occlusion for
+some nice effects. You can mess with the HBAO Sampling Range and HBAO
+Amount sliders to taste but I like the values as they're shown. The
+purple shire coat shot in the examples has a sampling range of 2.6 
+(the default) and all of the other shots use 0.001. Feel free to mess
+with this to see what looks good. Note that the Amount isn't the GShade
+default! I toned it down to the minimum to make it more subtle. Adjust
+if you like!
+
+The preset uses the default sample count, but the example screenshots max it out
+because my PC can handle it. This isn't recommended
+for most people because it's a good way to make a graphics card cry.
+
+SSGI - Screen space global illumination. Works similar to the other
+occulusion shaders except lights things up based on how light bounces
+off other sources, keeping some of the color of what it bounced off of.
+
+From the defaults, I turned down the sampling range, turned down
+the illumination muliplier all the way (the defaults are waaaaay too high)
+and turned off the built in occlusion because other shaders are covering that.
+The example screen shots also max out the sample rate because my card can handle
+it but it's the default value in the released version. The difference is minimal
+and your PC will thank you.
+
+Ambient Light - off by default. Nice bloom effect, turn it on if you like that.
+
+Clarity - Does some blurring based on brightness. Kinda just turned on and didn't
+think about it much. The effect is pretty minimal, you can turn it off if you like
+that better.
+
+MultiLUT - Does some color and light (mostly brightening) adjustment based on a 
+lookup table provided by a file (in this case it's a GShade file). Color 1 gives
+the game a blue tint, which is used to counteract the game's natural warm (orange)
+tint. You can adjust the sliders for brightness if you like.
+
+Levels - Turns close-to-black pixels black and close-to-white pixels white. Good for
+reducing some of the fading that happens when we brighten things with the other shaders.
+
+Reinhard - Tonemap. Makes things brighter. I turned this on, left it at the defaults, and
+didn't touch it again. Adjust this at your own peril, it's easy to go down a rabbit hole!
+
+Lightroom - Swiss army knife for light and color adjustment. Gives you a lot of fine
+grained control over the brightness and color and even add a vignette (limb darkening 
+in game) at a bit of a learning curve. Keep this near the end of your presets for final
+adjustments!
+
+What I'm using it for here:
+
+- I'm turning down Aqua Saturation to counteract the blue tint made by MultiLUT while
+  preserving the rest of the color changes that it did. This results in the game feeling
+  less orange and more vibrant while not turning the game blue because of the lookup
+  table.
+- I'm turning up the contrast to make the colors and shadows a bit more defined.
+- I'm upping the saturation and vibrance as a color boost. Saturation boosts up color
+  equally across the spectrum, while vibrance boosts the color while trying to preserve
+  skin tone colors as best it can (so basically less effect on the reds and oranges).
+  I generally try to keep a 1:2 ratio on saturation to vibrance because R'iscall has
+  orange skin and boosting the saturation too much blows that out a lot. Mess around
+  with this if you want!
+
+Emphasize - Takes the background and tints it. You can turn this off if you like, but
+I use it to hide all of the artifacts in the background caused by both the lighting
+and color boosts from other shaders. Alternatively you can tweak the BlendColor,
+BlendFactor (0 = no emphasis, 1 = full blending), and EffectFactor (0 = grey, 
+1 = full blend color tint) to match your needs. Adjust FocusDepth based on your zoom
+level (it's super precise close up); the goal is to alter the background without 
+changing the foreground. 
+
+AdaptiveSharpen - Sharpening shader, makes edges more pronounced. I turned the strength
+way down because there were huge artifacts near the edges, especially at lower resolutions.
+
+ADOF - Background blurring. Off by default, you can turn it on if you want to blur out
+background artifacts. Adjust the autofocus point as necessary.
+
+GaussianBlur - Blurs away artifacts (mostly from sharpening) for a cleaner picture.
+Can adjust this if you think the effect isn't enough or is too much.
+
+GAUSSIAN - more contrast-y Gaussian blur. You can use this one instead of GaussianBlur
+and adjust the strength for a nice effect if you want. There are other effects too but
+I don't really use them.
+
+CompositionThirds/CenterLines - convenience shaders to show lines for centering/rule
+of thirds. Turn on when you need them and off when you're done!
+
+Deband - All of this brightening tends to make background artifacts - use this to try
+to smooth them out. If you're losing details in the foreground turn on the Use Depth
+checkbox and adjust it accordingly (if you're using it for close up studio portraits
+the sweet spot is usually very low)
+
+Bilinear Interpolation Anti Aliasing - Smooths out rough edges. I turned it on and left
+the defaults the way they were.
+
+Copyright - Adds the FFXIV copyright text to the bottom middle of the image. Has 1440p and
+4K variants, turn on whichever one you want, or none of them. Adjust sliders to move/rotate
+it if you wish, I like it where it is because it's the most crop-friendly.
+
+FFRestoreUI - puts the UI back on the screen. Make sure this is one of the last things in your
+active shader list!
+
+After - Turn this on if you want to split up the image for before/after GShade changes. Use
+the dropdown for different divisions.
