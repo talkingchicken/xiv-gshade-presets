@@ -4,22 +4,24 @@ By R'iscall Mortiss (Primal/Famfrit) - @RiscallXIV on twitter
 As the name states, this preset is used mostly in studios when
 you have a solid black background behind you. I like using it with
 White Screens (housing vendors sell them) dyed jet black (though
-soot black is fine too!). It's tuned for the gpose lights but you
+soot black is fine too!). It's tuned for the gpose lights but you 
 can probably use whatever housing lights you want with some adjustment.
-I use basic three point lighting up close, and sometimes adjust
-character lighting and global brightness in gpose as necessary.
+I use basic three point lighting up close (white lights in front,
+colors in the back to emphasize glam), and sometimes adjust character
+lighting and global brightness in gpose as necessary.
 
-EXAMPLES - (link to the tweet when I post it)
+Examples are in the similarly named folder!
 
 Most of this can be used out of the box with very little adjustment.
 I included a bunch of optional shaders you can turn on and off for
 some nice effects, but they're not necessary. For the most part it
 can be used at any resolution, though I have included clone copyright
-shaders for both 1440p and 4K, just turn one off and the other on
-(or leave them both off, you TOS-defying maniac :P).
+shaders for both 1440p and 4K (I'll do 1080p if people want), just
+turn one off and the other on (or leave them both off, you TOS-defying
+maniac :P).
 
 Like any other preset, feel free to mess with the sliders to your
-hearts' desires!
+hearts' desires! Though maybe make a copy first before you do. :P
 
 I've included a list below on what each individual shader does because
 I had to learn what a lot of these did and how they worked myself and
@@ -37,24 +39,26 @@ GShade.
 
 MXAO - Off by default. Ambient occlusion shader. Used to put better
 shadows on edges. Offered as an alternative to the on-by-default HBAO
-for shadows in case it's making your graphics card scream.
+for shadows if you like that more. Or use both if you want!
 
 HBAO - Another occlusion shader. Does some pretty costly occlusion for
 some nice effects. You can mess with the HBAO Sampling Range and HBAO
 Amount sliders to taste but I like the values as they're shown. The
-purple shire coat shot in the examples has a sampling range of 2.6 
+first purple shire coat shot in the examples has a sampling range of 2.6 
 (the default) and all of the other shots use 0.001. Feel free to mess
 with this to see what looks good. Note that the Amount isn't the GShade
 default! I toned it down to the minimum to make it more subtle. Adjust
 if you like!
 
-The preset uses the default sample count, but the example screenshots max it out
-because my PC can handle it. This isn't recommended
-for most people because it's a good way to make a graphics card cry.
+The preset uses the default sample count, but the example screenshots 
+max it out because my PC can handle it. You can try maxing it out if you
+like but the difference isn't very noticeable and your framerate will
+tank for it.
 
 SSGI - Screen space global illumination. Works similar to the other
-occulusion shaders except lights things up based on how light bounces
-off other sources, keeping some of the color of what it bounced off of.
+occulusion shaders except for light instead of shadows. Adds light based
+on how it bounces off other surfaces, keeping some of the color of what it
+bounced off of.
 
 From the defaults, I turned down the sampling range, turned down
 the illumination muliplier all the way (the defaults are waaaaay too high)
@@ -111,7 +115,8 @@ AdaptiveSharpen - Sharpening shader, makes edges more pronounced. I turned the s
 way down because there were huge artifacts near the edges, especially at lower resolutions.
 
 ADOF - Background blurring. Off by default, you can turn it on if you want to blur out
-background artifacts. Adjust the autofocus point as necessary.
+background artifacts. Adjust the autofocus point as necessary. There's more you can do
+with this but for a studio shot it doesn't really matter too much.
 
 GaussianBlur - Blurs away artifacts (mostly from sharpening) for a cleaner picture.
 Can adjust this if you think the effect isn't enough or is too much.
