@@ -1,0 +1,68 @@
+Simple Gameplay Preset
+By R'iscall Mortiss (Primal/Famfrit) - @RiscallXIV on twitter
+
+This preset is what I use for my normal gameplay preset. I play in
+1440p on max settings but this should work for a variety of other
+resolutions and graphics settings as well.
+
+Examples are in the similarly named folder!
+
+The purpose of this preset is to provide some small boosts to color
+and shadows while maintaining the general look and feel of the game.
+I took care to try to make sure overall brightness levels were maintained
+and that no particular color sticks out like a sore thumb.
+
+Overall the differences should be pretty minimal - it is a gameplay
+preset, after all. It's just a few small changes to make the game
+look just a little bit prettier without affecting performance much.
+
+WHAT EACH SHADER DOES:
+
+Before - used with After at the bottom. Together they show half
+the screen as it looks without GShade for comparison.
+
+FFKeepUI - used with FFRestoreUI so that the UI isn't affected by
+GShade. Make sure the Occlusion Assistance checkbox is off otherwise
+your UI will start to cast shadows.
+
+qMXAO - Ambient occlusion. Makes more pretty shadows appear. Mostly
+default settings but I turned down the Ambient Occlusion Amount slider
+from 1.0 to 0.4 to keep it very subtle. Feel free to adjust to taste.
+
+This shader is also the biggest performance hit of the preset -
+if you're having trouble with framerate issues lower the sample
+quality here.
+
+FXAA - Edge detection and anti-aliasing. Makes edges smoother.
+Default settings.
+
+Filmic Sharpen - Sharpen filter. Makes edges more pronounced.
+Turned down the strength to keep it subtle so you don't see weird lines
+on all the borders.
+
+GaussianBlur - Blurs away artifacts (mostly from sharpening) for a 
+cleaner picture. Default settings. Can adjust this if you think the
+effect isn't enough or is too much.
+
+Lightroom - Swiss army knife for light and color adjustment. Gives you a lot of fine
+grained control over the brightness and color and even add a vignette (limb darkening 
+in game) at a bit of a learning curve. Keep this near the end of your presets for final
+adjustments!
+
+What I'm using it for here:
+
+- I'm shifting the temperature on the global white balance just a smidge cooler
+  to counteract the game's natural warm (orange) tint.
+- I'm turning down Aqua Saturation to counteract the blue tint made by adjusting the
+  white balance temperature while still preserving the reduced orange.
+- I'm turning up the contrast to make the brights and darks a bit more defined.
+- I'm upping the vibrance as a color boost. Vibrance boosts the color while trying to preserve
+  skin tone colors as best it can (so basically less effect on the reds and oranges).
+  This is important for someone like R'iscall, who has orange-brown skin and a straight
+  saturation boost blows that up way too much.
+
+FFRestoreUI - puts the UI back on the screen. Make sure this is one of the last things in your
+active shader list!
+
+After - Turn this on if you want to split up the image for before/after GShade changes. Use
+the dropdown for different divisions.
