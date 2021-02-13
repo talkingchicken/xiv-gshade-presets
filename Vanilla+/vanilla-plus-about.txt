@@ -1,0 +1,125 @@
+Vanilla+ General Purpose Preset
+By R'iscall Mortiss (Primal/Famfrit) - @RiscallXIV on twitter
+
+The main purpose of this preset is to provide a basic enhanced
+graphical experience without altering the image too much in terms
+of both brightness and color. Great care was taken that overall
+levels remained the same as vanilla after all of the enhancements are
+made.
+
+There are two flavors to this preset. The first is a gameplay preset,
+where you get most of the nice benefits to both occlusion and color
+without sacrificing too much in performance. The second is a higher
+performance preset, providing some extra occlusion, depth of field,
+and a few optional shaders you can play around with.
+
+One recommendation is that there's a lot of ambient occlusion in these
+shaders that might make the game's built in occlusion look a little off.
+My recommendation is if you want to use the gameplay version of this preset
+to turn off ambient occlusion in your graphics settings completely since
+GShade would handle it. It is how all of the example shots were taken.
+
+Full size examples in the example folder!
+
+WHAT EACH SHADER DOES:
+
+Before - used with After at the bottom. Together they show half
+the screen as it looks without GShade for comparison.
+
+FFKeepUI - used with FFRestoreUI so that the UI isn't affected by
+GShade.
+
+MultiLUT - Does some color and light (mostly brightening) adjustment based on a 
+lookup table provided by a file (in this case it's a GShade file). Color 1 gives
+the game a blue tint, which is used to counteract the game's natural warm (orange)
+tint. You can adjust the sliders for brightness if you like.
+
+Note that this is at the top of the list because a few of the shaders
+bump the brightness of the LUT up to maximum when you turn them on above
+this - not sure why this happens but watch your ordering!
+
+Ambient Light (photo preset only) - Optional shader, adds some nice ambient
+lighting to the shot. Feel free to toggle the alInt value and the AL_Dirt checkbox
+and the ones nearby for some other different effects.
+
+Bilinear Interpolation Anti Aliasing - Smooths out rough edges. I turned it on and left
+the defaults the way they were.
+
+qMXAO - Ambient occlusion. Adds more shadows to textures. I also have the indirect
+lighting preprocessor definition turned on so it'll add some reflected light too.
+
+MXAOFFXIV - more ambient occlusion. I'm assuming this version has a bit more info
+from FFXIV on how to cast shadows and does it a little differently. When combined
+with qMXAO it seems to provide a nice effect, so I'm doing that.
+
+SSGI (photo preset only) - Screen space global illumination. Works similar to the other
+occulusion shaders except for light instead of shadows. Adds light based
+on how it bounces off other surfaces, keeping some of the color of what it
+bounced off of.
+
+From the defaults, I turned down the sampling range, turned down
+the illumination muliplier all the way (the defaults are waaaaay too high)
+and turned off the built in occlusion because other shaders are covering that.
+
+FXAA - Anti-aliasing. Edge detection. Softens edges.
+
+Filmic Sharpen - Sharpens edges and textures, making them look a little less blurry.
+Strength is turned way down from the defaults because it sticks out like a sore
+thumb otherwise, especially on lower resolutions.
+
+ADOF (photo preset only) - depth of field. Has built in (non-mouse driven) autofocus,
+and some nice bokeh effects.
+
+The defaults provided in the preset are fine for most things, but there's a lot you can play
+around with here. There's a lot to explain here, but feel free to just play with things and
+get a feel for it!
+
+Pirate_Bloom (photo preset only) - Off by default, but easy to turn on. Very light bloom 
+effect. Kept at defaults. Leaves a nice glow since that's all the rage these days.
+
+Lightroom - Swiss army knife for light and color adjustment. Gives you a lot of fine
+grained control over the brightness and color and even add a vignette (limb darkening 
+in game) at a bit of a learning curve. Keep this near the end of your presets for final
+adjustments!
+
+What I'm using it for here:
+
+- I'm turning down Aqua Saturation to counteract the blue tint made by MultiLUT while
+  preserving the rest of the color changes that it did. This results in the game feeling
+  less orange and more vibrant while not turning the game blue because of the lookup
+  table.
+- I'm turning down the gamma to make the colors and shadows a bit more defined while
+  keeping the white and black points the same.
+- I'm upping the saturation and vibrance as a color boost. Saturation boosts up color
+  equally across the spectrum, while vibrance boosts the color while trying to preserve
+  skin tone colors as best it can (so basically less effect on the reds and oranges).
+  I generally try to keep a 1:2 ratio on saturation to vibrance because R'iscall has
+  orange skin and boosting the saturation too much blows that out a lot. Mess around
+  with this if you want!
+
+Lightroom+but just a histogram - Lightroom also has a histogram function hidden in it
+if you want to use that to check levels without having to open the image up in an editor
+later. I wanted to be able to toggle this without having to open up the shader every time,
+so I cloned Lightroom and made a second one that shows only the histogram and the white/black
+clipping points. It's assigned to shift+f5 for easy toggling but you can use whatever you want!
+
+GaussianBlur - Blurs away artifacts (mostly from sharpening) for a cleaner picture.
+Can adjust this if you think the effect isn't enough or is too much.
+
+Copyright - Adds the FFXIV copyright text to the bottom middle of the image. Has 1440p and
+4K variants, turn on whichever one you want, or none of them. Adjust sliders to move/rotate
+it if you wish, I like it where it is because it's the most crop-friendly.
+
+CompositionThirds - convenience shaders to show lines for centering/rule
+of thirds. Turn on when you need them and off when you're done!
+
+Vertical Previewer and Composition - Convenience shader made for making vertical shots
+less of a literal pain in the neck. Also includes composition lines! Off by default, 
+but turn it on when you are setting things up and off right before you hit screenshot.
+I've assigned it to shift+f4 so you can turn it on and off easily!
+
+FFRestoreUI - puts the UI back on the screen. Make sure this is one of the last things in your
+active shader list!
+
+After - Turn this on if you want to split up the image for before/after GShade changes. Use
+the dropdown for different divisions.
