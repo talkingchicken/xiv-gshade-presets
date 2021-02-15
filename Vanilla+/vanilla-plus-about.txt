@@ -63,6 +63,9 @@ and turned off the built in occlusion because other shaders are covering that.
 
 FXAA - Anti-aliasing. Edge detection. Softens edges.
 
+Clarity - Make things look a little more crisp. Just turned it on and left
+it at the defaults.
+
 Filmic Sharpen - Sharpens edges and textures, making them look a little less blurry.
 Strength is turned way down from the defaults because it sticks out like a sore
 thumb otherwise, especially on lower resolutions.
